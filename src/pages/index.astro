@@ -422,8 +422,11 @@ const page = {
           <div class="card">
             <h2>Send a message</h2>
 
-            <!-- Form backend will be wired in the next milestone (Formspree). -->
-            <form>
+            <form method="POST" action="https://formspree.io/f/xjggrpzn">
+              <input type="hidden" name="_subject" value="New Altivis Consulting lead" />
+              <input type="hidden" name="_next" value="https://altivisconsulting.com/thanks" />
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
 
@@ -437,8 +440,6 @@ const page = {
                 <button class="btn primary" type="submit">Send</button>
               </div>
 
-              <p class="small muted" style="margin-top: 10px;">
-                Form delivery will be activated next (currently this button won’t send).
               </p>
             </form>
           </div>
