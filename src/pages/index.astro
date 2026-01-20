@@ -28,21 +28,24 @@ const page = {
       :root {
         color-scheme: light;
       }
-       body {
+      body {
         margin: 0;
-        padding: 0 12px;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
-          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        padding: 0 20px;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          "Apple Color Emoji",
+          "Segoe UI Emoji";
         line-height: 1.5;
         color: #0b1220;
-        background: #3db68d;
+        background: #ffffff;
       }
-      @media (min-width: 900px) {
-        body {
-          padding: 0;
-        }
-      }
-      @media (min-width: 900px) {
+      @media (min-width: 1200px) {
         body {
           padding: 0;
         }
@@ -59,12 +62,14 @@ const page = {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
         padding: 18px 0;
+        background: #ffffff;
       }
-      .brand {
-        font-weight: 700;
-        letter-spacing: -0.02em;
+      @media (max-width: 899px) {
+        .nav {
+          flex-direction: column;
+          gap: 12px;
+        }
       }
       .pill {
         display: inline-flex;
@@ -86,7 +91,7 @@ const page = {
       .hero .grid-2 {
         gap: 28px;
       }
-      @media (min-width: 900px) {
+      @media (min-width: 1200px) {
         .grid-2 {
           grid-template-columns: 1.2fr 0.8fr;
           align-items: start;
@@ -101,7 +106,7 @@ const page = {
         letter-spacing: -0.03em;
         margin: 14px 0 12px;
       }
-      @media (min-width: 900px) {
+      @media (min-width: 1200px) {
         h1 {
           font-size: 48px;
         }
@@ -213,7 +218,7 @@ const page = {
         display: grid;
         gap: 14px;
       }
-      @media (min-width: 900px) {
+      @media (min-width: 1200px) {
         .split {
           grid-template-columns: 1fr 1fr;
           align-items: start;
@@ -225,8 +230,21 @@ const page = {
   <body>
     <header class="wrap">
       <nav class="nav">
-        <div class="brand">Altivis Consulting LLC</div>
-        <a class="btn primary" href={BOOKINGS_URL} target="_blank" rel="noopener">
+        <a href="/" style="height:50px; width:auto; display:block;">
+          <img
+            src="/img/altivis-logo-long-white.png"
+            alt="Altivis Consulting LLC"
+            style="height:50px; width:auto; display:block;"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+        <a
+          class="btn primary"
+          href={BOOKINGS_URL}
+          target="_blank"
+          rel="noopener"
+        >
           Get a free 20-min ops triage
         </a>
       </nav>
@@ -235,32 +253,35 @@ const page = {
     <main>
       <!-- HERO -->
       <section class="hero wrap">
-
         <div class="grid grid-2" style="margin-top: 16px;">
           <div>
             <h1>
-              Make operations predictable: cleaner planning, clearer KPIs, and fewer fire drills.
+              Make operations predictable: cleaner planning, clearer KPIs, and
+              fewer fire drills.
             </h1>
             <p class="muted" style="font-size: 16px;">
-              Altivis helps operations and supply chain leaders build practical systems that
-              improve throughput, stabilize planning, and create visibility.
+              Altivis helps operations and supply chain leaders build practical
+              systems that improve throughput, stabilize planning, and create
+              visibility.
             </p>
 
-        <div class="pill">
-          <span>Operations • S&amp;OP • Systems Automation • Process Improvement</span>
-        </div>
+            <div class="pill">
+              <span
+                >Operations • S&amp;OP • Systems Automation • Process
+                Improvement</span
+              >
+            </div>
 
             <div class="btnrow">
-              <a class="btn primary" href="#contact">
-                Get in touch
-              </a>
+              <a class="btn primary" href="#contact"> Get in touch </a>
               <a class="btn primary" href="/altivis-capability-statement.pdf">
                 Download capability statement (PDF)
               </a>
             </div>
 
             <p class="small muted" style="margin-top: 10px;">
-              Typical engagements: 4–12 weeks • Project-based or hourly • Remote-first (on-site as needed)
+              Typical engagements: 4–12 weeks • Project-based or hourly •
+              Remote-first (on-site as needed)
             </p>
           </div>
 
@@ -269,7 +290,9 @@ const page = {
             <div class="kpi">
               <div class="row">
                 <div><strong>Clarity</strong></div>
-                <div class="muted small">Your #1 bottleneck + why it persists</div>
+                <div class="muted small">
+                  Your #1 bottleneck + why it persists
+                </div>
               </div>
               <div class="row">
                 <div><strong>Plan</strong></div>
@@ -277,10 +300,14 @@ const page = {
               </div>
               <div class="row">
                 <div><strong>Options</strong></div>
-                <div class="muted small">DIY guidance or a scoped engagement</div>
+                <div class="muted small">
+                  DIY guidance or a scoped engagement
+                </div>
               </div>
               <div class="row">
-              <div class="muted small">Note: Triage report generally delivered within 48hrs</div>
+                <div class="muted small">
+                  Note: Triage report generally delivered within 48hrs
+                </div>
               </div>
             </div>
           </aside>
@@ -291,7 +318,8 @@ const page = {
       <section class="section wrap">
         <h2>Who Altivis is best for</h2>
         <p class="muted">
-          Executives, Owners, and Supply Chain Leaders who need hands-on help improving operations and driving insights throught KPIs
+          Executives, Owners, and Supply Chain Leaders who need hands-on help
+          improving operations and driving insights through KPIs
         </p>
         <div style="margin-top: 10px;">
           <span class="tag">Operations &amp; Supply Chain Leaders</span>
@@ -311,19 +339,22 @@ const page = {
           <div class="card">
             <strong>S&amp;OP and planning system design</strong>
             <p class="small muted" style="margin-top: 8px;">
-              Meeting cadence, roles, inputs/outputs, and a plan that aligns demand, supply, and finance.
+              Meeting cadence, roles, inputs/outputs, and a plan that aligns
+              demand, supply, and finance.
             </p>
           </div>
           <div class="card">
             <strong>KPI systems &amp; operational analytics</strong>
             <p class="small muted" style="margin-top: 8px;">
-              Define the few metrics that drive decisions then build a simple reporting rhythm people use.
+              Define the few metrics that drive decisions then build a simple
+              reporting rhythm people use.
             </p>
           </div>
           <div class="card">
             <strong>Lean process improvement</strong>
             <p class="small muted" style="margin-top: 8px;">
-              Remove waste, shorten cycle time, and standardize work within teams.
+              Remove waste, shorten cycle time, and standardize work within
+              teams.
             </p>
           </div>
         </div>
@@ -331,7 +362,9 @@ const page = {
         <div class="card" style="margin-top: 14px;">
           <strong>Also available:</strong>
           <p class="small muted" style="margin-top: 8px;">
-            Forecasting &amp; capacity models • Inventory/working-capital improvement • Cross-functional operating rhythms • Systems automation
+            Forecasting &amp; capacity models • Inventory/working-capital
+            improvement • Cross-functional operating rhythms • Systems
+            automation
           </p>
         </div>
       </section>
@@ -343,23 +376,25 @@ const page = {
           <div class="card">
             <strong>12+ years in operations</strong>
             <p class="small muted" style="margin-top: 8px;">
-              Manufacturing, planning, and supply chain from shop floor to executive reporting.
+              Manufacturing, planning, and supply chain from shop floor to
+              executive reporting.
             </p>
           </div>
           <div class="card">
             <strong>Scaled output ~400%</strong>
             <p class="small muted" style="margin-top: 8px;">
-              Supported COVID test kit ramp by building production readiness and planning discipline.
+              Supported COVID test kit ramp by building production readiness and
+              planning discipline.
             </p>
           </div>
           <div class="card">
             <strong>Reduced cycle time ~50%</strong>
             <p class="small muted" style="margin-top: 8px;">
-              Lean and process improvements in regulated manufacturing environments.
+              Lean and process improvements in regulated manufacturing
+              environments.
             </p>
           </div>
         </div>
-        
       </section>
 
       <!-- PROCESS -->
@@ -369,19 +404,22 @@ const page = {
           <div class="card">
             <strong>1) Diagnose</strong>
             <p class="small muted" style="margin-top: 8px;">
-              Quick discovery: objectives, constraints, data reality-check, and where the system is breaking.
+              Quick discovery: objectives, constraints, data reality-check, and
+              where the system is breaking.
             </p>
           </div>
           <div class="card">
             <strong>2) Design</strong>
             <p class="small muted" style="margin-top: 8px;">
-              We pick the simplest operating rhythm and metrics that solve the problem, not add overhead.
+              We pick the simplest operating rhythm and metrics that solve the
+              problem, not add overhead.
             </p>
           </div>
           <div class="card">
             <strong>3) Implement</strong>
             <p class="small muted" style="margin-top: 8px;">
-              Templates, training, and working sessions so the team can run it without me.
+              Templates, training, and working sessions so the team can run it
+              without me.
             </p>
           </div>
         </div>
@@ -393,16 +431,19 @@ const page = {
           <div class="card">
             <h2>About Altivis</h2>
             <p class="muted">
-              Altivis Consulting LLC helps teams build operational systems that stick: planning, KPI visibility,
-              and lean execution. The goal is fewer surprises, faster decisions, and steady improvement. We believe the best 
-              processes are the ones that you can for get about.
+              Altivis Consulting LLC helps teams build operational systems that
+              stick: planning, KPI visibility, and lean execution. The goal is
+              fewer surprises, faster decisions, and steady improvement. We
+              believe the best processes are the ones that you can forget about.
             </p>
           </div>
           <div class="card">
             <h2>About Bill</h2>
             <p class="muted">
-              Bill Clarke is an operations and supply chain consultant with 12+ years across manufacturing and life sciences,
-              including Deloitte. His style is hands-on: clarify the problem, build the solution, and transfer the playbook.
+              Bill Clarke is an operations and supply chain consultant with 12+
+              years across manufacturing and life sciences, including Deloitte.
+              His style is hands-on: clarify the problem, build the solution,
+              and transfer the playbook.
             </p>
           </div>
         </div>
@@ -414,11 +455,17 @@ const page = {
           <div class="card">
             <h2>Contact</h2>
             <p class="muted">
-              The fastest way to connect is the 20-min triage. If you prefer, send a note here and I’ll reply by email.
+              The fastest way to connect is the 20-min triage. If you prefer,
+              send a note here and I’ll reply by email.
             </p>
 
             <div class="btnrow" style="margin-top: 12px;">
-              <a class="btn primary" href={BOOKINGS_URL} target="_blank" rel="noopener">
+              <a
+                class="btn primary"
+                href={BOOKINGS_URL}
+                target="_blank"
+                rel="noopener"
+              >
                 Get a free 20-min ops triage
               </a>
               <a class="btn" href={`mailto:${CONTACT_EMAIL}`}>
@@ -435,15 +482,41 @@ const page = {
             <h2>Send a message</h2>
 
             <form method="POST" action="https://formspree.io/f/xjggrpzn">
-              <input type="hidden" name="_subject" value="New Altivis Consulting lead" />
-              <input type="hidden" name="_next" value="https://altivisconsulting.com/thanks/" />
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Altivis Consulting lead"
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://altivisconsulting.com/thanks/"
+              />
+              <input
+                type="text"
+                name="_gotcha"
+                style="display:none"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
 
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
 
               <label for="message">What are you working on?</label>
               <textarea id="message" name="message" required></textarea>
@@ -451,7 +524,6 @@ const page = {
               <div class="btnrow" style="margin-top: 12px;">
                 <button class="btn primary" type="submit">Send</button>
               </div>
-
             </form>
           </div>
         </div>
@@ -461,8 +533,9 @@ const page = {
         <div class="grid" style="gap: 6px;">
           <div>© {new Date().getFullYear()} Altivis Consulting LLC</div>
           <div>
-            Privacy: We only use your information to respond to your inquiry. Basic site analytics may be enabled to
-            understand traffic (no sale of personal information).
+            Privacy: We only use your information to respond to your inquiry.
+            Basic site analytics may be enabled to understand traffic (no sale
+            of personal information).
           </div>
         </div>
       </footer>
