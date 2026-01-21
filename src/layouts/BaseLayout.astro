@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+
+const {
+  title = "Altivis Consulting",
+  description = "",
+  robots = "index,follow",
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+  </head>
+
+  <body>
+    <Header
+      logoText="Altivis Consulting"
+      ctaHref="#contact"
+      ctaText="Get in touch"
+    />
+
+    <slot />
+  </body>
+</html>

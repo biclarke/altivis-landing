@@ -1,0 +1,21 @@
+---
+const {
+  brandHref = "/",
+  logoSrc = "/img/logo.svg",
+  logoAlt = "Altivis Consulting",
+  ctaHref = "#",
+  ctaText = "Contact",
+} = Astro.props;
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href={brandHref}>
+      <img class="brand-logo" src={logoSrc} alt={logoAlt} />
+    </a>
+
+    <nav class="nav">
+      <a class="btn primary" href={ctaHref}>{ctaText}</a>
+    </nav>
+  </div>
+</header>
