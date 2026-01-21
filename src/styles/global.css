@@ -1,0 +1,292 @@
+/* =========================
+   1) Design tokens (variables)
+========================= */
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: rgba(2, 6, 23, 0.12);
+  --brand: #132b4d;
+  --brand-dark: #0f223d;
+
+  --maxw: 1040px;
+  --radius: 18px;
+
+  --shadow: 0 18px 50px rgba(2, 6, 23, 0.08);
+  --shadow-soft: 0 10px 26px rgba(2, 6, 23, 0.06);
+}
+
+/* =========================
+   2) Base / reset
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   3) Layout helpers
+========================= */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+/* =========================
+   4) Typography helpers
+========================= */
+h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 13px;
+}
+
+/* =========================
+   5) Components (reusable)
+========================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-logo {
+  height: 46px;
+  width: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: white;
+}
+
+.btn.primary:hover {
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.hero {
+  display: grid;
+  gap: 18px;
+}
+
+.hero > .card {
+  height: 100%;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-bottom {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.hero h1 {
+  font-size: 56px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 2px;
+}
+
+.hero-meta {
+  max-width: 60ch;
+}
+
+.hero-right .btn.primary {
+  display: flex;
+  width: 100%;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  max-width: 65ch;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.hero-top {
+  display: grid;
+  gap: 18px;
+}
+
+.list {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.list li {
+  margin: 6px 0;
+}
+
+.section {
+  padding: 56px 0;
+}
+
+.section-body {
+  display: grid;
+  gap: 18px;
+}
+
+.section--muted {
+  background: rgba(15, 23, 42, 0.03);
+}
+
+.section-title {
+  margin: 0 0 8px;
+}
+
+.section-subtitle {
+  margin: 0 0 18px;
+  max-width: 65ch;
+}
+
+.services-cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.services-grid {
+  display: grid;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.services-grid > .card {
+  height: 100%;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.tag {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 13px;
+  background: #fff;
+}
+/* =========================
+   6) Responsive
+========================= */
+@media (min-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1.8fr 0.8fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 520px) {
+  .section {
+    padding: 36px 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}

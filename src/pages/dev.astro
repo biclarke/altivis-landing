@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+
+const page = {
+  title: "Dev | Altivis Consulting",
+  description: "Work in progress rebuild of the Altivis Consulting site.",
+};
+---
+
+<BaseLayout
+  title={page.title}
+  description={page.description}
+  robots="noindex,nofollow"
+>
+  <main>
+    <Section id="top">
+      <div class="hero">
+        <div class="hero-left">
+          <h1>
+            Make operations predictable: cleaner planning, clearer KPIs, and
+            fewer fire drills.
+          </h1>
+
+          <p class="muted hero-subtitle">
+            Altivis helps operations and supply chain leaders build practical
+            systems that improve throughput, stabilize planning, and create
+            visibility.
+          </p>
+
+          <div class="hero-tags">
+            <span class="tag">Operations</span>
+            <span class="tag">S&amp;OP</span>
+            <span class="tag">KPIs</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div>
+
+        <aside class="card hero-right">
+          <h2>What you get</h2>
+
+          <p class="muted" style="margin-top: 0; margin-bottom: 0;">
+            A clear plan and concrete next steps. Fast.
+          </p>
+
+          <ul class="list" style="margin-top: 0;">
+            <li>
+              <strong>Clarity:</strong> your biggest bottleneck + why it persists
+            </li>
+            <li><strong>Plan:</strong> a realistic 30-day action plan</li>
+            <li>
+              <strong>Options:</strong> DIY guidance or a scoped engagement
+            </li>
+          </ul>
+
+          <a class="btn primary" href="#contact" style="margin-top: 12px;">
+            Book a quick call
+          </a>
+
+          <p
+            class="muted"
+            style="margin-top: 0; margin-bottom: 0; font-size: 12px; text-align: center;"
+          >
+            Ops triage usually availale within 48hrs • Typical engagements: 4–12
+            weeks • Project-based or hourly • Remote-first (on-site as needed)
+          </p>
+        </aside>
+      </div>
+    </Section>
+  </main>
+
+  <Section
+    id="services"
+    title="Services"
+    subtitle="Practical, hands-on support to make operations predictable—without overcomplicating your systems."
+  >
+    <div class="services-grid">
+      <article class="card">
+        <h3 class="card-title">S&amp;OP and planning</h3>
+        <p class="muted">
+          Turn “tribal knowledge” into a repeatable planning rhythm that
+          connects demand, supply, and execution.
+        </p>
+        <ul class="list">
+          <li>Planning cadence + roles</li>
+          <li>Inputs/outputs that stick</li>
+          <li>Simple models + governance</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3 class="card-title">KPIs and visibility</h3>
+        <p class="muted">
+          Define a small set of metrics that actually drive behavior—and make
+          performance easy to see.
+        </p>
+        <ul class="list">
+          <li>Operational KPI design</li>
+          <li>Dashboards &amp; reporting</li>
+          <li>Daily/weekly management</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3 class="card-title">Automation and process improvement</h3>
+        <p class="muted">
+          Remove manual work, reduce errors, and tighten handoffs using
+          lightweight tools and clear process design.
+        </p>
+        <ul class="list">
+          <li>Workflow cleanup</li>
+          <li>System automation</li>
+          <li>Standard work + controls</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="services-cta">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="#process">See how it works</a>
+    </div>
+  </Section>
+</BaseLayout>
