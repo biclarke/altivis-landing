@@ -217,88 +217,125 @@ const CONTACT_EMAIL = "bill@altivisconsulting.com";
         </li>
       </ol>
     </Section>
+
     <Section
-      id="contact"
-      title="Contact"
-      subtitle="The fastest way to connect is a short triage call. If you prefer, send a note and I’ll reply by email."
+      id="pricing"
+      variant="muted"
+      title="Transparent pricing"
+      subtitle="Typical pricing tiers for base hourly rate. Enangements billed via flat weeky rate outlined in the consulting agreement. New client discounts available."
     >
-      <div class="split">
-        <div class="card">
-          <h3 class="card-title">Contact</h3>
-          <p class="muted">
-            The fastest way to connect is the 20-min triage. If you prefer, send
-            a note here and I’ll reply by email.
-          </p>
-
-          <div class="btnrow">
-            <a
-              class="btn primary"
-              href={BOOKINGS_URL}
-              target="_blank"
-              rel="noopener"
-            >
-              Get a free 20-min ops triage
-            </a>
-
-            <a class="btn" href={`mailto:${CONTACT_EMAIL}`}>
-              Email {CONTACT_EMAIL}
-            </a>
+      <div class="pricing">
+        <div class="pricing-table">
+          <div class="pricing-row pricing-head">
+            <div>Weekly commitment</div>
+            <div>Rate</div>
           </div>
 
-          <p class="small muted contact-note">
-            Response time: typically within 1 business day.
-          </p>
-        </div>
+          <div class="pricing-row">
+            <div><strong>Up to 10 hrs/week</strong></div>
+            <div><strong>$150/hr - $1500/week max</strong></div>
+          </div>
 
-        <div class="card">
-          <h3 class="card-title">Send a message</h3>
+          <div class="pricing-row">
+            <div><strong>11–25 hrs/week</strong></div>
+            <div><strong>$125/hr - $3125/week max</strong></div>
+          </div>
 
-          <form method="POST" action="https://formspree.io/f/xjggrpzn">
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Altivis Consulting lead"
-            />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://altivisconsulting.com/thanks/"
-            />
-            <input
-              type="text"
-              name="_gotcha"
-              style="display:none"
-              tabindex="-1"
-              autocomplete="off"
-            />
+          <div class="pricing-row">
+            <div><strong>26–40 hrs/week</strong></div>
+            <div><strong>$100/hr - $4000/week max</strong></div>
+          </div>
 
-            <label for="name">Name</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              autocomplete="name"
-              required
-            />
-
-            <label for="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              required
-            />
-
-            <label for="message">What are you working on?</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <div class="btnrow form-actions">
-              <button class="btn primary" type="submit">Send</button>
-            </div>
-          </form>
+          <div class="pricing-row pricing-emphasis">
+            <div><strong>Full-time implementation</strong></div>
+            <div><strong>$4,000/week</strong></div>
+          </div>
         </div>
       </div>
     </Section>
   </main>
+
+  <Section
+    id="contact"
+    title="Contact"
+    subtitle="The fastest way to connect is a short triage call. If you prefer, send a note and I’ll reply by email."
+  >
+    <div class="split">
+      <div class="card">
+        <h3 class="card-title">Contact</h3>
+        <p class="muted">
+          The fastest way to connect is the 20-min triage. If you prefer, send a
+          note here and I’ll reply by email.
+        </p>
+
+        <div class="btnrow">
+          <a
+            class="btn primary"
+            href={BOOKINGS_URL}
+            target="_blank"
+            rel="noopener"
+          >
+            Get a free 20-min ops triage
+          </a>
+
+          <a class="btn" href={`mailto:${CONTACT_EMAIL}`}>
+            Email {CONTACT_EMAIL}
+          </a>
+        </div>
+
+        <p class="small muted contact-note">
+          Response time: typically within 1 business day.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Send a message</h3>
+
+        <form method="POST" action="https://formspree.io/f/xjggrpzn">
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Altivis Consulting lead"
+          />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://altivisconsulting.com/thanks/"
+          />
+          <input
+            type="text"
+            name="_gotcha"
+            style="display:none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <label for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+          <label for="message">What are you working on?</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <div class="btnrow form-actions">
+            <button class="btn primary" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </Section>
 </BaseLayout>

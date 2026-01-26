@@ -152,7 +152,7 @@ h2 {
 }
 
 .footer {
-  padding: 28px 0;
+  padding: 28px;
   border-top: 1px solid var(--border);
   margin-top: 32px;
   font-size: 13px;
@@ -394,6 +394,48 @@ textarea {
   font-size: 13px;
   background: #fff;
 }
+
+.pricing {
+  display: grid;
+  gap: 18px;
+}
+
+.pricing-table {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+}
+
+.pricing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.pricing-row:first-child {
+  border-top: 0;
+}
+
+.pricing-head {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  background: rgba(15, 23, 42, 0.03);
+}
+
+.pricing-emphasis {
+  background: rgba(19, 43, 77, 0.06);
+}
+
+.pricing-note .btn.primary {
+  width: 100%;
+  display: flex;
+  margin-top: 12px;
+}
+
 /* =========================
    6) Responsive
 ========================= */
@@ -415,6 +457,11 @@ textarea {
 
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+
+  .pricing {
+    grid-template-columns: 1.4fr 0.6fr;
     align-items: start;
   }
 }
@@ -462,6 +509,18 @@ textarea {
 
   .services-cta {
     justify-content: center;
+  }
+
+  .pricing-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-head {
+    display: none;
+  }
+
+  .pricing-row > div:nth-child(2) {
+    font-size: 16px;
   }
 }
 
