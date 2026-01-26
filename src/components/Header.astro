@@ -5,6 +5,7 @@ const {
   logoAlt = "Altivis Consulting",
   ctaHref = "#",
   ctaText = "Contact",
+  CONTACT_EMAIL = "bill@altivisconsulting.com",
 } = Astro.props;
 ---
 
@@ -15,7 +16,7 @@ const {
     </a>
 
     <nav class="nav">
-      <a class="btn primary" href={ctaHref}>{ctaText}</a>
+      <a class="btn primary" href={`mailto:${CONTACT_EMAIL}`}>{ctaText}</a>
     </nav>
   </div>
 </header>

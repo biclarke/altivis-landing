@@ -127,6 +127,13 @@ h2 {
   border-color: var(--brand-dark);
 }
 
+.btnrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
 .card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -138,6 +145,47 @@ h2 {
 .card-title {
   font-size: 18px;
   margin: 0 0 8px;
+}
+
+.contact-note {
+  margin-top: 10px;
+}
+
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+.form-actions {
+  margin-top: 12px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font: inherit;
+  background: #fff;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
 }
 
 .header-inner {
@@ -197,6 +245,12 @@ h2 {
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 14px;
+}
+
+.hero-tags--filled .tag {
+  background: var(--grey-fill);
+  border-color: var(--grey-fill);
+  color: #fff;
 }
 
 .hero-top {
@@ -268,6 +322,16 @@ h2 {
   background: #ffffff;
 }
 
+.split {
+  display: grid;
+  gap: 18px;
+}
+
+.split {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
 .step {
   display: grid;
   grid-template-columns: 34px 1fr;
@@ -278,15 +342,14 @@ h2 {
 
 .steps {
   list-style: none;
-  padding: 14px 0;
+  padding: 0;
   margin: 0;
   display: grid;
   gap: 0px;
 }
 
 .step-line {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: 0;
   line-height: 1.45;
 }
 
@@ -374,15 +437,31 @@ h2 {
     justify-content: center;
   }
 
-  .btn.primary {
-    background: var(--brand);
-    border-color: var(--brand);
-    color: white;
-    text-align: center;
+  .hero-actions {
     display: flex;
-    width: fit-content;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .hero-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .services-cta {
+    justify-content: center;
   }
 }
 
